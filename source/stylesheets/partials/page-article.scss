@@ -1,4 +1,4 @@
-.news_image {
+#container > .news_image {
   width: 100%;
   height: 750px;
   background-size: cover;
@@ -15,7 +15,7 @@ article.main_news {
   @include box-sizing(border-box);
   @include respond-to(small) {
     width: 70%;
-    padding: 70px 40px;
+    padding: 40px;
   }
   .tag_share {
     margin: 30px 0;
@@ -105,4 +105,9 @@ article.main_news {
       }
     }
   }
+}
+
+article.small_news {
+  @extend article.main_news;
+  margin: 0 auto;
 }
