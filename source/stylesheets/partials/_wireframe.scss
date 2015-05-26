@@ -36,14 +36,15 @@ img {
   height: 100%;
   width: 100%;
   position: relative;
+  padding-top: 61px;
   @include animate-object;
   background-color: $white;
   @include clear-float;
   &.mobile_active {
     margin-left: 300px;
   }
-  > header {
-    @include site-width;
+  @include respond-to(large) {
+    padding-top: 0;
   }
 }
 
@@ -52,10 +53,13 @@ img {
   height: 67px;
   display: none;
   &.active {
-    display: block;
+    display: none;
     body.home &,
     body.index & {
       display: none;
+    }
+    @include respond-to(large) {
+      display: block;
     }
   }
 }
