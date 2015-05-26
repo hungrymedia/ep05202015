@@ -56,29 +56,55 @@
   .bottom_footer {
     @include site-width;
     @include flexbox();
-    @include flex-flow(row nowrap);
+    @include flex-flow(column nowrap);
     position: relative;
     background-color: $black;
     color: $white;
     padding-top: 15px;
     padding-bottom: 15px;
+    @include respond-to(small) {
+      @include flex-flow(row nowrap);
+    }
     p {
-      @include flex(1 1 auto);
+      @include flex(1 1 50%);
+      @include order(2);
       @include font-size(10);
       vertical-align: middle;
+      text-align: center;
+      margin: 15px 0;
+      @include respond-to(small) {
+        @include order(1);
+        text-align: left;
+        margin: 0;
+      }
     }
     .to_top {
       @include flex(0 0 33px);
+      @include order(3);
       width: 33px;
       height: 38px;
       @include img-content(-20px, -290px);
       z-index: 9999;
       vertical-align: middle;
+      opacity: 1;
+      text-align: center;
+      margin: 0 auto;
+      &:hover {
+        opacity: .6;
+      }
+      @include respond-to(small) {
+        @include order(2);
+      }
     } 
     ul.social_footer {
-      @include flex(1 1 auto);
-      text-align: right;
+      @include flex(1 1 50%);
+      @include order(1);
       vertical-align: middle;
+      text-align: center;
+      @include respond-to(small) {
+        @include order(3);
+        text-align: right;
+      }
       li {
         display: inline-block;
         a {

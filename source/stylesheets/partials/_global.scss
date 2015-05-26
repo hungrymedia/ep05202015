@@ -65,7 +65,7 @@ $black: #182128;
 @mixin hide-text {
   color: transparent;
   text-shadow: none;
-  text-indent: -99999px;
+  text-indent: -9999px;
 }
 
 @mixin animate-object {
