@@ -72,6 +72,23 @@ header.desktop {
             max-height: 70px;
           }
         }
+        &.onpage {
+          background-color: $green;
+          > a {
+            color: $white;
+          }
+          &::after {
+            width: 0; 
+            height: 0; 
+            content: '';
+            position: absolute;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 20px solid $green;
+            border-width: 15px;
+            margin-left: -15px;
+          }
+        }
         > a {
           text-transform: uppercase;
           height: 100%;
