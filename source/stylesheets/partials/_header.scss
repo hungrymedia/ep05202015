@@ -1,0 +1,182 @@
+header.desktop {
+  position: relative;
+  background-color: rgba($white, .9);
+  margin-top: 5px;
+  display: none;
+  z-index: +1;
+  body.home &,
+  body.index & {
+    position: absolute;
+    top: 250px;
+    left: 0;
+  }
+  @include respond-to(large) {
+    @include flexbox();
+  }
+  &.fixed {
+    position: fixed !important;
+    top: 0 !important;
+  }
+  nav {
+    @include flex(0 1 auto);
+    .logo {
+      display: inline-block;
+      vertical-align: middle;
+      a {
+        width: 210px;
+        height: 51px;
+        @include img-content(-15px, -15px);
+        padding: 6px 15px 5px;
+        @include un-animate-object;
+      }
+      &:hover {
+        a {
+          @include img-content(-15px, -85px);
+          background-color: $green;
+        }
+      }
+    }
+    > ul { // TOP LEVEL
+      font-weight: bold;
+      display: inline-block;
+      vertical-align: middle;
+      li {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        &:hover {
+          background-color: $green;
+          > a {
+            color: $white;
+          }
+        }
+        &.active {
+          background-color: $green;
+          > a {
+            color: $white;
+          }
+          &::after {
+            width: 0; 
+            height: 0; 
+            content: '';
+            position: absolute;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 20px solid $grey;
+            border-width: 15px;
+            margin-left: -15px;
+            margin-top: -15px;
+          }
+          ul {
+            max-height: 70px;
+          }
+        }
+        > a {
+          text-transform: uppercase;
+          height: 100%;
+          display: block;
+          padding: 21px 15px;
+          color: $black;
+        }
+        > ul { // SECOND LEVEL
+          position: absolute;
+          background-color: $grey;
+          left: 0;
+          width: 100%;
+          font-weight: normal;
+          max-height: 0;
+          overflow: hidden;
+          @include animate-object;
+          li {
+            display: inline-block;
+            &:hover {
+              background-color: $grey;
+            }
+            a {
+              color: $black;
+              padding: 10px 15px;
+              text-transform: capitalize;
+              &:hover {
+                color: $green;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+form.search {
+  @include flex(1 1 auto);
+  position: relative;
+  input {
+    display: inline-block;
+    vertical-align: middle;
+    &[type=text] {
+      @include flex(1 1 auto);
+      max-width: 0;
+      opacity: 0;
+      position: absolute;
+      right: 0;
+      padding: 21px 15px 22px;
+      @include animate-object;
+    }
+    &[type=submit] {
+      @include flex(0 0 auto);
+      width: 30px;
+      margin: 0 15px 0 0;
+      height: 100%;
+      @include img-content(-20px, -155px);
+      padding: 0;
+      background-color: transparent;
+      position: absolute;
+      right: 0;
+    }
+  }
+  &:hover {
+    input[type=text] {
+      max-width: 600px;
+      opacity: 1;
+    }
+  }
+}
+
+header.mobile {
+  display: block;
+  background-color: $white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  z-index: +1;
+  position: fixed;
+  // body.home &,
+  // body.index & {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   @include respond-to(small) {
+  //     top: 250px;
+  //   }
+  // }
+  @include respond-to(large) {
+    display: none;
+  }
+  nav {
+    position: relative;
+    h1 {
+      .logo {
+        width: 210px;
+        height: 51px;
+        @include img-content(-20px, -20px);
+        margin: 0 auto;
+      }
+    }
+    .hamburger {
+      position: absolute;
+      width: 33px;
+      height: 28px;
+      @include img-content(-20px, -230px);
+      margin-top: 10px;
+    }
+  }
+}

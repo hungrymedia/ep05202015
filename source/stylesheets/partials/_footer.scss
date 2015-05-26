@@ -1,0 +1,115 @@
+#container > footer {
+  .map {
+    padding-bottom: 330px; // HEIGHT OF MAP
+  }
+  .contact {
+    background: $white image-url('footer_decoration.png') left top no-repeat;
+    @include site-width;
+    .contact_container {
+      @include flexbox();
+      @include flex-flow(column nowrap);
+      max-width: 670px;
+      margin: 0 auto;
+      padding: 40px 0;
+      .form_container {
+        @include flex(1 1 auto);
+        @include order(2);
+      }
+      .locations {
+        @include flex(0 0 auto);
+        @include order(1);
+        margin-left: 0;
+        text-align: center;
+        a {
+          color: $black;
+          display: inline-block;
+          margin: 30px;
+          text-align: center;
+          &:hover {
+            color: $green;
+          }
+        }
+      }
+      @include respond-to(xsmall) {
+        .locations {
+          a {
+            text-align: left;
+          }
+        }
+      }
+      @include respond-to(small) {
+        @include flex-flow(row nowrap);
+        .form_container {
+          @include order(1);
+        }
+        .locations {
+          @include order(2);
+          margin-left: 80px;
+          a {
+            display: block;
+            margin:25px 0 0 0 ;
+          }
+        }
+      }
+    }
+  }
+  .bottom_footer {
+    @include site-width;
+    @include flexbox();
+    @include flex-flow(row nowrap);
+    position: relative;
+    background-color: $black;
+    color: $white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    p {
+      @include flex(1 1 auto);
+      @include font-size(10);
+      vertical-align: middle;
+    }
+    .to_top {
+      @include flex(0 0 33px);
+      width: 33px;
+      height: 38px;
+      @include img-content(-20px, -290px);
+      z-index: 9999;
+      vertical-align: middle;
+    } 
+    ul.social_footer {
+      @include flex(1 1 auto);
+      text-align: right;
+      vertical-align: middle;
+      li {
+        display: inline-block;
+        a {
+          vertical-align: middle;
+          margin: 0 15px;
+          opacity: 1;
+          &:hover {
+            opacity: .6;
+          }
+          &.twitter {
+            width: 21px;
+            height: 17px;
+            @include img-content(-20px, -420px);
+          }
+          &.youtube {
+            width: 26px;
+            height: 19px;
+            @include img-content(-20px, -460px);
+          }
+          &.facebook {
+            width: 20px;
+            height: 20px;
+            @include img-content(-20px, -500px);
+          }
+          &.rss {
+            width: 20px;
+            height: 20px;
+            @include img-content(-20px, -540px);
+          }
+        }
+      }
+    }
+  }
+}

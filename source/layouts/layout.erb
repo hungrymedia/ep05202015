@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0">
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= current_page.data.title || "Empower MediaMarketing" %></title>
+
+    <%= favicon_tag 'images/favicon.ico' %>
+
+    <script src="//use.typekit.net/drd6xkt.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+
+    <%= stylesheet_link_tag "styles" %>
+    <%= javascript_include_tag  "modernizr" %>
+  </head>
+
+  <body class="<%= page_classes %>">
+    <%= partial "mobile_nav" %>
+    <div id="container">
+      <%= yield %>
+      <%= partial "footer" %>
+    </div>
+    <%= javascript_include_tag  "all" %>
+  </body>
+</html>

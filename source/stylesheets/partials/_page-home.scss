@@ -1,0 +1,73 @@
+.page-slide {
+  height: 100%;
+  background-size: cover;
+  background-position: top left;
+  background-repeat: none;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+  .slide_content {
+    width: 82%;
+    padding: 30px 15px 45px;
+    background: image-url('arrow_green_right.png') bottom right no-repeat;
+    position: absolute;
+    top: 175px;
+    bottom: auto;
+    left: 5%;
+    right: 5%;
+    background-color: rgba($white, .8);
+    @include border-radius(6px);
+    color: $black;
+    &:hover {
+      background-color: rgba($white, .5);
+    }
+    @include respond-to(small) {
+      width: 45%;
+      left: auto;
+      right: 250px;
+    }
+  }
+  &.slide1 {
+    .slide_content {
+      top: auto;
+      bottom: 100px;
+    }
+  }
+  a.next {
+    width: 33px;
+    height: 38px;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    margin-left: -16px;
+    @include img-content(-20px, -350px);
+    opacity: 1;
+    &:hover {
+      opacity: .5;
+    }
+  }
+  &:last-child {
+    a.next {
+      display: none;
+    }
+  }
+  video {
+    // position: fixed;
+    // top: 50%;
+    // left: 50%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    display: none;
+    // -webkit-transform: translateX(-50%) translateY(-50%);
+    // transform: translateX(-50%) translateY(-50%);
+    @include respond-to(large) {
+      display: block;
+    }
+  }
+}
