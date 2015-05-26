@@ -1,11 +1,13 @@
 .information_boxes {
   ul { // LARGE BOXES
-    @include flexbox();
-    @include flex-flow(row wrap);
+    // @include flexbox();
+    // @include flex-flow(row wrap);
+    @include clear-float;
     li {
       height: 250px;
-      @include flex(1 1 100%);
-      
+      // @include flex(1 1 100%);
+      width: 100%;
+      float: none;
       a {
         width: 100%;
         height: 100%;
@@ -15,8 +17,6 @@
         position: relative;
         background-size: cover;
         background-position: 0 0;
-        // @include background-image(radial-gradient(ellipse at center, rgba(191, 117, 31, 0) 55%, rgba(191, 117, 31, 0.35) 100%));
-        background-image: radial-gradient(ellipse at center, rgba(191, 117, 31, 0) 55%, rgba(191, 117, 31, 0.35) 100%);
         .overlay {
           width: 100%;
           height: 100%;
@@ -61,6 +61,7 @@
             bottom: 0;
             padding: 30px;
             color: $white;
+            margin: 0;
           }
         }
         &:hover {
@@ -87,7 +88,9 @@
       ul { // SMALL BOXES
         li {
           height: 125px;
-          @include flex(1 1 50%);
+          // @include flex(1 1 50%);
+          float: left;
+          width: 50%;
           a {
             header {
               opacity: 0;
@@ -107,10 +110,14 @@
       }
       // LI LEVEL
       @include respond-to(small) { 
-        @include flex(1 1 50%);
+        // @include flex(1 1 50%);
+        width: 50%;
+        float: left;
       }
       @include respond-to(large) { 
-        @include flex(1 1 33%);
+        // @include flex(1 1 33%);
+        width: 33.33%;
+        float: left;
       }
     }
   }
@@ -137,6 +144,11 @@
     }
     > li {
       display: none;
+      > a span {
+        p {
+          @include font-size(24);
+        }
+      }
       @include respond-to(small) { 
         &:nth-child(1),
         &:nth-child(2) {
@@ -146,6 +158,18 @@
       @include respond-to(large) {
         &:nth-child(3) {
           display: block;
+        }
+      }
+    }
+  }
+}
+
+.news_preview {
+  > ul {
+    li {
+      span {
+        p {
+          @include font-size(24);
         }
       }
     }

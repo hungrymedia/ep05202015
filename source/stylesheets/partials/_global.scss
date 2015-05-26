@@ -32,7 +32,7 @@ $black: #182128;
     @media only screen and (min-width: 450px){ @content; }
   }
   @if $media == small {
-    @media only screen and (min-width: 620px){ @content; }
+    @media only screen and (min-width: 650px){ @content; }
   }
   @else if $media == medium {
     @media only screen and (min-width: 850px){ @content; } 

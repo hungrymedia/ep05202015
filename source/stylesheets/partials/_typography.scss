@@ -20,6 +20,15 @@ body {
   color: $black;
 }
 
+p {
+  margin: 15px 0;
+  &.leadin {
+    @include font-size(22);
+    font-style: italic;
+    margin: 25px 0;
+  }
+}
+
 a {
   color: $green;
   text-decoration: none;
@@ -39,11 +48,35 @@ h2 {
 h3 {
   @include font-size(28);
   font-weight: bold;
+  margin: 15px 0;
 }
 
 h4 {
   @include font-size(22);
   font-weight: bold;
+  margin: 15px 0;
+}
+
+h5 {
+  @include font-size(17);
+  font-weight: bold;
+}
+
+blockquote {
+  font-style: italic;
+  position: relative;
+  padding: 20px 35px;
+  &::before {
+    font-family: 'emm-icons';
+    content: "";
+    color: $green;
+    font-size: 60px;
+    opacity: .2;
+    position: absolute;
+    top: 1;
+    left: 0;
+    font-style: normal;
+  }
 }
 
 

@@ -55,11 +55,11 @@ $(document).ready(function(){
     var scrollpos = $(window).scrollTop();
 
     if (scrollpos >= headeroffset.top) {
-      if (!$('header').hasClass("fixed")) {
-        $('header').addClass("fixed");
+      if (!$('#container > header').hasClass("fixed")) {
+        $('#container > header').addClass("fixed");
       }   
     } else {
-      $('header').removeClass("fixed");
+      $('#container > header').removeClass("fixed");
     }
 
   });
