@@ -3,11 +3,14 @@
     // @include flexbox();
     // @include flex-flow(row wrap);
     @include clear-float;
+    margin: 0 !important;
+    list-style-type: none;
     li {
       height: 250px;
       // @include flex(1 1 100%);
       width: 100%;
       float: none;
+      margin: 0 !important;
       a {
         width: 100%;
         height: 100%;

@@ -101,12 +101,15 @@
       @include order(1);
       vertical-align: middle;
       text-align: center;
+      margin: 0 !important;
+      list-style-type: none;
       @include respond-to(small) {
         @include order(3);
         text-align: right;
       }
       li {
         display: inline-block;
+        margin: 0 !important;
         a {
           vertical-align: middle;
           margin: 0 15px;

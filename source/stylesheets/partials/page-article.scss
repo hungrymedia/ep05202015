@@ -22,8 +22,11 @@ article.main_news {
     @include flexbox();
     ul {
       vertical-align: middle;
+      margin: 0 !important;
+      list-style-type: none;
       li {
         display: inline-block;
+        margin: 0 !important;
       }
       &.tags {
         @include flex(1 1 auto);

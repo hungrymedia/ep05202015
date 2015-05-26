@@ -27,6 +27,12 @@ p {
     font-style: italic;
     margin: 25px 0;
   }
+  a {
+    opacity: 1;
+    &:hover {
+      opacity: .4;
+    }
+  }
 }
 
 a {
@@ -76,6 +82,52 @@ blockquote {
     top: 1;
     left: 0;
     font-style: normal;
+  }
+}
+
+
+#container { // GENERAL STYLES IN PAGES
+  ol {
+    list-style-type: decimal;
+    list-style-position: outside;
+    margin: 0 0 0 15px;
+    li {
+      margin: 15px;
+      ol {
+        list-style-type: upper-alpha;
+        li {
+          ol {
+            list-style-type: upper-roman;
+            li {
+              ol {
+                list-style-type: lower-alpha;
+                li {
+                  ol {
+                    list-style-type: lower-roman;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  ul {
+    list-style-type: disc;
+    list-style-position: outside;
+    margin: 0 0 0 15px;
+    li {
+      margin: 15px;
+      ul {
+        list-style-type: circle;
+        li {
+          ul {
+            list-style-type: square;
+          }
+        }
+      }
+    }
   }
 }
 
