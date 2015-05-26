@@ -27,6 +27,7 @@ $(document).ready(function(){
     $('body > header').toggleClass('mobile_active');
     $('#container').toggleClass('mobile_active');
     $('body > .news_header').toggleClass('mobile_active');
+    $(this).toggleClass('close');
     // FORCE REDRAW IN MOBILE SAFARI
     // if (navigator.userAgent.match(/Version\/[\d\.]+.*Safari/)) {
     //   $('.mobile_nav').hide();

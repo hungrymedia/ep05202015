@@ -45,6 +45,7 @@ header.desktop {
         display: inline-block;
         vertical-align: middle;
         text-align: center;
+        @include animate-object;
         &:hover {
           background-color: $green;
           > a {
@@ -200,7 +201,11 @@ header.mobile {
       width: 33px;
       height: 28px;
       @include img-content(-20px, -230px);
+      @include un-animate-object;
       margin-top: 10px;
+      &.close {
+        @include img-content(-70px, -230px);
+      }
     }
   }
 }
