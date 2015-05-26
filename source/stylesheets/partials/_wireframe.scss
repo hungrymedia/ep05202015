@@ -46,3 +46,16 @@ img {
     @include site-width;
   }
 }
+
+.sticky_spacer {
+  width: 100%;
+  height: 67px;
+  display: none;
+  &.active {
+    display: block;
+    body.home &,
+    body.index & {
+      display: none;
+    }
+  }
+}

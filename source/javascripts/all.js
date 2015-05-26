@@ -24,7 +24,9 @@ $(document).ready(function(){
   $('.hamburger').click(function(e) { 
     e.preventDefault();
     $('.mobile_nav').toggleClass('mobile_active');
+    $('body > header').toggleClass('mobile_active');
     $('#container').toggleClass('mobile_active');
+    $('body > .news_header').toggleClass('mobile_active');
     // FORCE REDRAW IN MOBILE SAFARI
     // if (navigator.userAgent.match(/Version\/[\d\.]+.*Safari/)) {
     //   $('.mobile_nav').hide();
@@ -55,12 +57,18 @@ $(document).ready(function(){
     var scrollpos = $(window).scrollTop();
 
     if (scrollpos >= headeroffset.top) {
-      if (!$('#container > header').hasClass("fixed")) {
-        $('#container > header').addClass("fixed");
-      }   
+      if (!$('body > header').hasClass("fixed")) {
+        $('body > header').addClass("fixed");
+      } 
+      if (!$('.sticky_spacer').hasClass("active")) {
+        $('.sticky_spacer').addClass("active");
+      }    
     } else {
-      $('#container > header').removeClass("fixed");
+      $('body > header').removeClass("fixed");
+      $('.sticky_spacer').removeClass("active");
     }
+
+
 
   });
 

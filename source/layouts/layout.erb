@@ -19,8 +19,11 @@
   </head>
 
   <body class="<%= page_classes %>">
+    <%= partial "news_header" %> <!-- HOMEPAGE ONLY -->
+    <%= partial "header" %>
     <%= partial "mobile_nav" %>
     <div id="container">
+      <div class="sticky_spacer"></div>
       <%= yield %>
       <%= partial "footer" %>
     </div>
