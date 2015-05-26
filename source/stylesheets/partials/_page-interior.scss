@@ -1,0 +1,13 @@
+article.interior_page {
+  width: 100%;
+  margin: 0 auto;
+  padding: 70px 5%;
+  background: $white;
+  position: relative;
+  @include box-sizing(border-box);
+  @include respond-to(small) {
+    width: 70%;
+    padding: 40px;
+    margin: -450px auto 0;
+  }
+}
