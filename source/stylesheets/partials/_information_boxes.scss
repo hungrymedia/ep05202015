@@ -5,8 +5,7 @@
     li {
       height: 250px;
       @include flex(1 1 100%);
-      background-size: cover;
-      background-position: center center;
+      
       a {
         width: 100%;
         height: 100%;
@@ -14,6 +13,20 @@
         color: $black;
         @include animate-object;
         position: relative;
+        background-size: cover;
+        background-position: 0 0;
+        // @include background-image(radial-gradient(ellipse at center, rgba(191, 117, 31, 0) 55%, rgba(191, 117, 31, 0.35) 100%));
+        background-image: radial-gradient(ellipse at center, rgba(191, 117, 31, 0) 55%, rgba(191, 117, 31, 0.35) 100%);
+        .overlay {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-image: radial-gradient(ellipse at center, rgba(191, 117, 31, 0) 55%, rgba(191, 117, 31, 0.35) 100%);
+        }
         header {
           background-color: rgba($white, .8);
           padding: 5px;
@@ -26,6 +39,9 @@
           span {
             @include font-size(17);
             float: left;
+          }
+          em {
+            display: none;
           }
         }
         > span {
@@ -52,8 +68,11 @@
           header {
             background-color: rgba($white, 0);
             span {
-              @include font-size(11);
-              float: none;
+              display: none;
+            }
+            em {
+              display: inline-block;
+              margin-right: 2px;
               &::after {
                 content: " : "
               }
@@ -127,6 +146,21 @@
       @include respond-to(large) {
         &:nth-child(3) {
           display: block;
+        }
+      }
+    }
+  }
+}
+
+.people {
+  > ul {
+    li {
+      span {
+        p {
+          @include font-size(18);
+          strong {
+            @include font-size(24);
+          }
         }
       }
     }

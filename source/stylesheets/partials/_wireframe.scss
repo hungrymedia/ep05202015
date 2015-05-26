@@ -21,6 +21,10 @@ body {
   background-color: $grey;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 img {
   border: 0;
   max-width: 100%;
