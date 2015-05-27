@@ -160,6 +160,14 @@ form.search {
       opacity: 1;
     }
   }
+  input:valid:not([type=submit]) {
+    border-color: none;
+    background: $white;
+  }
+  input:focus:invalid:not([type=submit]) {
+    border-color: none;
+    background: $white;
+  }
 }
 
 header.mobile {

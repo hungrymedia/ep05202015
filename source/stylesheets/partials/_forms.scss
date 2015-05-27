@@ -68,6 +68,16 @@ form {
       opacity: .6;
     }
   }
+  input:valid:not([type=submit]),
+  textarea:valid {
+    border-color: #080;
+    background: #e6ffe6 image-url('form_valid.png') no-repeat 97% center;
+  }
+  input:focus:invalid:not([type=submit]),
+  textarea:focus:invalid {
+    border-color: #800;
+    background: #ffe6e6 image-url('form_invalid.png') no-repeat 97% center;
+  }
 }
 
 footer {

@@ -7,9 +7,9 @@
       <div class="form_container">
         <h3>Contact Us</h3>
         <form action="">
-          <input type="text" placeholder="Name">
-          <input type="text" placeholder="E-Mail">
-          <textarea name="" id="" placeholder="Message"></textarea>
+          <input type="text" placeholder="Name" required>
+          <input type="text" placeholder="E-Mail" required pattern="^\S+@(([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6})$">
+          <textarea name="" id="" placeholder="Message" required></textarea>
           <input type="submit" value="Send">
         </form>
       </div>
