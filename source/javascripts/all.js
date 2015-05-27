@@ -3,8 +3,7 @@
 $(document).ready(function(){
 
   var headeroffset = $("header.desktop").offset();
-  var slidernavoffset = $("ul.slider_nav").offset();
-  var slidernavhalf = (slidernavoffset.top/2);
+  
 
 
   
@@ -61,6 +60,8 @@ $(document).ready(function(){
 
     // var screenmiddle = $(window).scrollTop() + ($(window).height()/2);
     var scrollpos = $(window).scrollTop();
+    var slidernavoffset = $("ul.slider_nav").offset();
+  var slidernavhalf = (slidernavoffset.top/2);
 
     console.log("top:" + scrollpos, "nav:" + slidernavoffset.top, "navmid:" + slidernavhalf);
       

@@ -7,9 +7,9 @@ ul.slider_nav {
   margin: 0 !important;
   list-style-type: none !important;
   &.sticky {
-    top: 50%;
+    top: 47%;
     bottom: auto;
-    transform: translateY(-50%);
+    transform: translateY(-47%);
     position: fixed;
   }
   li {
