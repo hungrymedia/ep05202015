@@ -7,6 +7,7 @@ ul.slider_nav {
   margin: 0 !important;
   list-style-type: none !important;
   opacity: 1;
+  display: none;
   &.sticky {
     top: 47%;
     bottom: auto;
@@ -15,7 +16,10 @@ ul.slider_nav {
   }
   &.hide {
     opacity: 0;
-      @include animate-object;
+    @include animate-object;
+  }
+  @include respond-to(small) {
+    display: block;
   }
   li {
     margin: 0 !important;

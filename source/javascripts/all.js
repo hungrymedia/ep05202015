@@ -54,7 +54,6 @@ $(document).ready(function(){
 
   $(window).scroll(function() {
 
-    // var screenmiddle = $(window).scrollTop() + ($(window).height()/2);
     var screenheight = $(window).height();
     var scrollpos = $(window).scrollTop();
     var screenmiddle = $(window).scrollTop() + ($(window).height()/2);
@@ -63,6 +62,7 @@ $(document).ready(function(){
     var footeroffset = $("#container > footer").offset();
       
     // STICKY HEADER
+    console.log("scroll:" + scrollpos, "item:" + headeroffset.top);
     if (scrollpos >= headeroffset.top) {
       if (!$('body > header').hasClass("fixed")) {
         $('body > header').addClass("fixed");

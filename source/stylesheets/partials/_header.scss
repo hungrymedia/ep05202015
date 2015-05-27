@@ -45,7 +45,7 @@
 // }
 
 header.desktop {
-  position: relative;
+  position: fixed;
   @include site-width;
   background-color: rgba($white, .9);
   margin-top: 5px;

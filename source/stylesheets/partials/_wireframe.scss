@@ -43,6 +43,16 @@ img {
   &.mobile_active {
     margin-left: 300px;
   }
+  body.home &,
+  body.index & {
+    padding-top: 0;
+  }
+  @include respond-to(small) {
+    body.home &,
+    body.index & {
+      padding-top: 61px;
+    }
+  }
   @include respond-to(large) {
     padding-top: 0;
   }

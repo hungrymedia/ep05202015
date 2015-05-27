@@ -133,13 +133,19 @@
     } 
   body.home &,
   body.index & {
-    display: block;
+    display: none;
     position: absolute;
-    top: 0;
+    top: 61px;
     left: auto !important;
     width: 100%;
     z-index: +1; 
     @include animate-object;
+    @include respond-to(small) {
+      display: block;
+    }
+    @include respond-to(large) {
+      top: 0;
+    }
   }
   > ul {
     margin-top: 0;
