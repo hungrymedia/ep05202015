@@ -1,0 +1,21 @@
+section.clients {
+  padding: 60px 5%;
+  ul {
+    margin: 0 !important;
+    list-style-type: none !important;
+    li {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 30px;
+      a {
+        opacity: 1;
+        &:hover {
+          opacity: .6;
+        }
+      }
+    }
+  }
+  @include respond-to(small) {
+    padding: 60px 10%;
+  }
+}
