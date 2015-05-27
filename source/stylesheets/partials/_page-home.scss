@@ -6,11 +6,16 @@ ul.slider_nav {
   z-index: +1;
   margin: 0 !important;
   list-style-type: none !important;
+  opacity: 1;
   &.sticky {
     top: 47%;
     bottom: auto;
     transform: translateY(-47%);
     position: fixed;
+  }
+  &.hide {
+    opacity: 0;
+      @include animate-object;
   }
   li {
     margin: 0 !important;
