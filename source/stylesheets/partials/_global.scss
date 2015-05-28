@@ -38,7 +38,7 @@ $black: #182128;
     @media only screen and (min-width: 850px){ @content; } 
   }
   @else if $media == large {
-    @media only screen and (min-width: 1025px){ @content; } 
+    @media only screen and (min-width: 1000px){ @content; }  // 1025PX FOR IPAD
   }
 }
 

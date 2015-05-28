@@ -21,6 +21,10 @@ body {
   background-color: $white;
 }
 
+html {
+  z-index: 1;
+}
+
 body {
   overflow-x: hidden;
 }
