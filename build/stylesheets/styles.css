@@ -1,0 +1,1828 @@
+@charset "UTF-8";
+/* line 5, /usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* line 22, /usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1; }
+
+/* line 24, /usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 26, /usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 28, /usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+/* line 30, /usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none; }
+  /* line 103, /usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+/* line 32, /usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none; }
+
+/* line 116, /usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+/* line 134, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_global.scss */
+.flexible-container {
+  position: relative;
+  padding-bottom: 400px;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden; }
+  /* line 141, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_global.scss */
+  .flexible-container.map iframe {
+    pointer-events: none; }
+
+/* line 146, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_global.scss */
+.flexible-container iframe,
+.flexible-container object,
+.flexible-container embed,
+.flexible-container #map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+  /* line 156, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_global.scss */
+  .flexible-container iframe img,
+  .flexible-container object img,
+  .flexible-container embed img,
+  .flexible-container #map img {
+    max-width: none; }
+  /* line 160, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_global.scss */
+  .flexible-container iframe div,
+  .flexible-container object div,
+  .flexible-container embed div,
+  .flexible-container #map div {
+    margin: 0; }
+  /* line 164, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_global.scss */
+  .flexible-container iframe #map_canvas img,
+  .flexible-container object #map_canvas img,
+  .flexible-container embed #map_canvas img,
+  .flexible-container #map #map_canvas img {
+    max-width: none; }
+  /* line 168, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_global.scss */
+  .flexible-container iframe .gm-style-iw,
+  .flexible-container object .gm-style-iw,
+  .flexible-container embed .gm-style-iw,
+  .flexible-container #map .gm-style-iw {
+    min-width: 200px;
+    min-height: 100px; }
+    /* line 171, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_global.scss */
+    .flexible-container iframe .gm-style-iw .infobox-content,
+    .flexible-container object .gm-style-iw .infobox-content,
+    .flexible-container embed .gm-style-iw .infobox-content,
+    .flexible-container #map .gm-style-iw .infobox-content {
+      min-height: 100px; }
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-o-keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes grow {
+  0% {
+    max-height: 0; }
+  100% {
+    max-height: 9999px; } }
+@-moz-keyframes grow {
+  0% {
+    max-height: 0; }
+  100% {
+    max-height: 9999px; } }
+@-o-keyframes grow {
+  0% {
+    max-height: 0; }
+  100% {
+    max-height: 9999px; } }
+@keyframes grow {
+  0% {
+    max-height: 0; }
+  100% {
+    max-height: 9999px; } }
+/* line 18, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_wireframe.scss */
+html,
+body {
+  height: 100%;
+  background-color: #ffffff; }
+
+/* line 24, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_wireframe.scss */
+html {
+  z-index: 1; }
+
+/* line 28, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_wireframe.scss */
+body {
+  overflow-x: hidden; }
+
+/* line 32, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_wireframe.scss */
+img {
+  border: 0;
+  max-width: 100%;
+  height: auto; }
+
+/* line 38, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_wireframe.scss */
+#container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  padding-top: 61px;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  background-color: #ffffff; }
+  /* line 54, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_global.scss */
+  #container:before, #container:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  /* line 60, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_global.scss */
+  #container:after {
+    clear: both; }
+  /* line 47, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_wireframe.scss */
+  #container.mobile_active {
+    margin-left: 300px; }
+  /* line 50, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_wireframe.scss */
+  body.home #container, body.index #container {
+    padding-top: 0; }
+  @media only screen and (min-width: 650px) {
+    /* line 55, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_wireframe.scss */
+    body.home #container, body.index #container {
+      padding-top: 61px; } }
+  @media only screen and (min-width: 1000px) {
+    /* line 38, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_wireframe.scss */
+    #container {
+      padding-top: 0; } }
+
+/* line 65, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_wireframe.scss */
+.sticky_spacer {
+  width: 100%;
+  height: 67px;
+  display: none; }
+  /* line 69, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_wireframe.scss */
+  .sticky_spacer.active {
+    display: none; }
+    /* line 71, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_wireframe.scss */
+    body.home .sticky_spacer.active, body.index .sticky_spacer.active {
+      display: none; }
+    @media only screen and (min-width: 1000px) {
+      /* line 69, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_wireframe.scss */
+      .sticky_spacer.active {
+        display: block; } }
+
+@font-face {
+  font-family: 'emm-icons';
+  src: url("/fonts/emm-icons.eot?-51is60");
+  src: url("/fonts/emm-icons.eot?#iefix-51is60") format("embedded-opentype"), url("/fonts/emm-icons.woff?-51is60") format("woff"), url("/fonts/emm-icons.ttf?-51is60") format("truetype"), url("/fonts/emm-icons.svg?-51is60#emm-icons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/* line 12, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+html {
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased; }
+
+/* line 17, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+body {
+  font-family: "proxima-nova",sans-serif;
+  font-size: 16px;
+  line-height: 20.8px;
+  font-size: 1.6rem;
+  line-height: 2.08rem;
+  color: #182128; }
+
+/* line 23, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+p {
+  margin: 15px 0; }
+  /* line 25, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+  p.leadin {
+    font-size: 22px;
+    line-height: 28.6px;
+    font-size: 2.2rem;
+    line-height: 2.86rem;
+    font-style: italic;
+    margin: 25px 0; }
+  /* line 30, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+  p a {
+    opacity: 1; }
+    /* line 32, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+    p a:hover {
+      opacity: .4; }
+
+/* line 38, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+a {
+  color: #82bc00;
+  text-decoration: none;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s; }
+
+/* line 44, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+h1 {
+  font-size: 42px;
+  line-height: 54.6px;
+  font-size: 4.2rem;
+  line-height: 5.46rem;
+  font-weight: bold; }
+
+/* line 49, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+h2 {
+  font-size: 34px;
+  line-height: 44.2px;
+  font-size: 3.4rem;
+  line-height: 4.42rem;
+  font-weight: bold; }
+
+/* line 54, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+h3 {
+  font-size: 28px;
+  line-height: 36.4px;
+  font-size: 2.8rem;
+  line-height: 3.64rem;
+  font-weight: bold;
+  margin: 15px 0; }
+
+/* line 60, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+h4 {
+  font-size: 22px;
+  line-height: 28.6px;
+  font-size: 2.2rem;
+  line-height: 2.86rem;
+  font-weight: bold;
+  margin: 15px 0; }
+
+/* line 66, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+h5 {
+  font-size: 17px;
+  line-height: 22.1px;
+  font-size: 1.7rem;
+  line-height: 2.21rem;
+  font-weight: bold; }
+
+/* line 71, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+blockquote {
+  font-style: italic;
+  position: relative;
+  padding: 20px 35px; }
+  /* line 75, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+  blockquote::before {
+    font-family: 'emm-icons';
+    content: "";
+    color: #82bc00;
+    font-size: 60px;
+    opacity: .2;
+    position: absolute;
+    top: 1;
+    left: 0;
+    font-style: normal; }
+
+/* line 90, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+#container ol {
+  list-style-type: decimal;
+  list-style-position: outside;
+  margin: 0 0 0 15px; }
+  /* line 94, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+  #container ol li {
+    margin: 15px; }
+    /* line 96, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+    #container ol li ol {
+      list-style-type: upper-alpha; }
+      /* line 99, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+      #container ol li ol li ol {
+        list-style-type: upper-roman; }
+        /* line 102, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+        #container ol li ol li ol li ol {
+          list-style-type: lower-alpha; }
+          /* line 105, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+          #container ol li ol li ol li ol li ol {
+            list-style-type: lower-roman; }
+/* line 116, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+#container ul {
+  list-style-type: disc;
+  list-style-position: outside;
+  margin: 0 0 0 15px; }
+  /* line 120, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+  #container ul li {
+    margin: 15px; }
+    /* line 122, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+    #container ul li ul {
+      list-style-type: circle; }
+      /* line 125, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+      #container ul li ul li ul {
+        list-style-type: square; }
+
+/* line 136, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'emm-icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* line 150, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+.icon-looking-glass:before {
+  content: "\e60c"; }
+
+/* line 154, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+.icon-small-swoosh:before {
+  content: "\e600"; }
+
+/* line 158, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+.icon-emm:before {
+  content: "\e601"; }
+
+/* line 162, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+.icon-dot:before {
+  content: "\e602"; }
+
+/* line 166, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+.icon-big-swoosh:before {
+  content: "\e603"; }
+
+/* line 170, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+.icon-arrow-simple-down:before {
+  content: "\e604"; }
+
+/* line 174, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+.icon-arrow-simple-right:before {
+  content: "\e605"; }
+
+/* line 178, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+.icon-arrow-simple-up:before {
+  content: "\e606"; }
+
+/* line 182, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+.icon-arrow-simple-left:before {
+  content: "\e607"; }
+
+/* line 186, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+.icon-arrow-left:before {
+  content: "\e608"; }
+
+/* line 190, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+.icon-arrow-up:before {
+  content: "\e609"; }
+
+/* line 194, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+.icon-arrow-right:before {
+  content: "\e60a"; }
+
+/* line 198, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_typography.scss */
+.icon-arrow-down:before {
+  content: "\e60b"; }
+
+/* line 3, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_forms.scss */
+form abbr {
+  border-bottom: none; }
+/* line 6, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_forms.scss */
+form label,
+form input,
+form select,
+form textarea {
+  display: block;
+  width: 100%;
+  font-weight: normal;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+  /* line 14, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_forms.scss */
+  form label[type="submit"],
+  form input[type="submit"],
+  form select[type="submit"],
+  form textarea[type="submit"] {
+    width: auto; }
+/* line 18, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_forms.scss */
+form input,
+form select,
+form textarea {
+  border: 0;
+  font-size: 15px;
+  line-height: 19.5px;
+  font-size: 1.5rem;
+  line-height: 1.95rem;
+  padding: 15px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-border-radius: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smooth: always !important;
+  -ms-font-smooth: always !important;
+  -moz-font-smooth: always !important;
+  -o-font-smooth: always !important;
+  font-smooth: always !important;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  font-smoothing: antialiased !important; }
+  /* line 61, /usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+  form input:-moz-placeholder,
+  form select:-moz-placeholder,
+  form textarea:-moz-placeholder {
+    color: rgba(24, 33, 40, 0.5); }
+  /* line 64, /usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+  form input::-moz-placeholder,
+  form select::-moz-placeholder,
+  form textarea::-moz-placeholder {
+    color: rgba(24, 33, 40, 0.5); }
+  /* line 67, /usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+  form input:-ms-input-placeholder,
+  form select:-ms-input-placeholder,
+  form textarea:-ms-input-placeholder {
+    color: rgba(24, 33, 40, 0.5); }
+  /* line 56, /usr/local/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/css3/_user-interface.scss */
+  form input::-webkit-input-placeholder,
+  form select::-webkit-input-placeholder,
+  form textarea::-webkit-input-placeholder {
+    color: rgba(24, 33, 40, 0.5); }
+/* line 36, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_forms.scss */
+form select::-ms-expand {
+  display: none; }
+/* line 39, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_forms.scss */
+form label {
+  font-size: 17px;
+  line-height: 22.1px;
+  font-size: 1.7rem;
+  line-height: 2.21rem;
+  margin-top: 30px; }
+  /* line 43, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_forms.scss */
+  form label a {
+    font-size: 13px;
+    line-height: 16.9px;
+    font-size: 1.3rem;
+    line-height: 1.69rem; }
+/* line 48, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_forms.scss */
+form select {
+  padding: 15px 45px 15px 15px; }
+  /* line 51, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_forms.scss */
+  html.ie9 form select {
+    background-image: none !important;
+    padding: 15px !important; }
+/* line 56, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_forms.scss */
+form input[type=submit] {
+  cursor: pointer;
+  background: 0;
+  text-transform: uppercase;
+  padding: 10px 50px;
+  background-color: #82bc00;
+  color: #ffffff;
+  opacity: 1; }
+  @media only screen and (min-width: 450px) {
+    /* line 56, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_forms.scss */
+    form input[type=submit] {
+      width: auto; } }
+  /* line 67, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_forms.scss */
+  form input[type=submit]:hover {
+    opacity: .6; }
+/* line 71, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_forms.scss */
+form input:valid:not([type=submit]),
+form textarea:valid {
+  border-color: #080;
+  background: #e6ffe6 url("/images/form_valid.png") no-repeat 97% center; }
+/* line 76, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_forms.scss */
+form input:focus:invalid:not([type=submit]),
+form textarea:focus:invalid {
+  border-color: #800;
+  background: #ffe6e6 url("/images/form_invalid.png") no-repeat 97% center; }
+
+/* line 83, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_forms.scss */
+form.search {
+  -webkit-box-flex: 1 1 auto;
+  -moz-box-flex: 1 1 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  position: relative; }
+  /* line 86, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_forms.scss */
+  form.search input {
+    display: inline-block;
+    vertical-align: middle; }
+    /* line 89, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_forms.scss */
+    form.search input[type=text] {
+      -webkit-box-flex: 1 1 auto;
+      -moz-box-flex: 1 1 auto;
+      -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      max-width: 0;
+      opacity: 0;
+      position: absolute;
+      right: 0;
+      padding: 21px 15px 22px;
+      -moz-transition-duration: 0.5s;
+      -o-transition-duration: 0.5s;
+      -webkit-transition-duration: 0.5s;
+      transition-duration: 0.5s; }
+    /* line 98, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_forms.scss */
+    form.search input[type=submit] {
+      -webkit-box-flex: 0 0 auto;
+      -moz-box-flex: 0 0 auto;
+      -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+      width: 30px;
+      margin: 0 15px 0 0;
+      height: 63px;
+      content: ' ';
+      background-image: url("/images/sprite.svg");
+      background-size: 400px 1001px !important;
+      background-position: -20px -155px;
+      background-repeat: no-repeat;
+      display: block;
+      color: transparent;
+      text-shadow: none;
+      text-indent: -9999px;
+      padding: 0;
+      background-color: transparent;
+      position: absolute;
+      right: 0; }
+      /* line 128, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_global.scss */
+      .no-svg form.search input[type=submit] {
+        background-image: url("/images/sprite.png"); }
+  /* line 111, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_forms.scss */
+  form.search:hover input[type=text] {
+    max-width: 600px;
+    opacity: 1; }
+  /* line 116, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_forms.scss */
+  form.search input:valid:not([type=submit]) {
+    border-color: none;
+    background: #ffffff; }
+  /* line 120, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_forms.scss */
+  form.search input:focus:invalid:not([type=submit]) {
+    border-color: none;
+    background: #ffffff; }
+
+/* line 128, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_forms.scss */
+footer form input[type=text],
+footer form textarea {
+  border-top: 1px solid #e4e4e6;
+  border-right: 1px solid #e4e4e6;
+  border-left: 1px solid #e4e4e6; }
+/* line 134, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_forms.scss */
+footer form textarea {
+  border-bottom: 1px solid #e4e4e6;
+  height: 130px; }
+/* line 138, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_forms.scss */
+footer form input[type=submit] {
+  width: auto;
+  float: right;
+  margin-top: 15px; }
+
+/* line 47, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_header.scss */
+header.desktop {
+  position: fixed;
+  width: 100%;
+  padding: 0 5%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin-top: 5px;
+  display: none;
+  z-index: +2; }
+  /* line 54, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_header.scss */
+  body.home header.desktop, body.index header.desktop {
+    position: absolute;
+    top: 250px;
+    left: 0; }
+  @media only screen and (min-width: 1000px) {
+    /* line 47, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_header.scss */
+    header.desktop {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex; } }
+  /* line 63, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_header.scss */
+  header.desktop.fixed {
+    position: fixed !important;
+    top: 0 !important; }
+  /* line 67, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_header.scss */
+  header.desktop nav {
+    -webkit-box-flex: 0 1 auto;
+    -moz-box-flex: 0 1 auto;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto; }
+    /* line 69, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_header.scss */
+    header.desktop nav .logo {
+      display: inline-block;
+      vertical-align: middle; }
+      /* line 72, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_header.scss */
+      header.desktop nav .logo a {
+        width: 210px;
+        height: 51px;
+        content: ' ';
+        background-image: url("/images/sprite.svg");
+        background-size: 400px 1001px !important;
+        background-position: -15px -15px;
+        background-repeat: no-repeat;
+        display: block;
+        color: transparent;
+        text-shadow: none;
+        text-indent: -9999px;
+        padding: 6px 15px 5px;
+        -moz-transition-duration: 0s;
+        -o-transition-duration: 0s;
+        -webkit-transition-duration: 0s;
+        transition-duration: 0s; }
+        /* line 128, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_global.scss */
+        .no-svg header.desktop nav .logo a {
+          background-image: url("/images/sprite.png"); }
+      /* line 80, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_header.scss */
+      header.desktop nav .logo:hover a {
+        content: ' ';
+        background-image: url("/images/sprite.svg");
+        background-size: 400px 1001px !important;
+        background-position: -15px -85px;
+        background-repeat: no-repeat;
+        display: block;
+        color: transparent;
+        text-shadow: none;
+        text-indent: -9999px;
+        background-color: #82bc00; }
+        /* line 128, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_global.scss */
+        .no-svg header.desktop nav .logo:hover a {
+          background-image: url("/images/sprite.png"); }
+    /* line 86, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_header.scss */
+    header.desktop nav > ul {
+      font-weight: bold;
+      display: inline-block;
+      vertical-align: middle; }
+      /* line 90, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_header.scss */
+      header.desktop nav > ul li {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s; }
+        /* line 95, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_header.scss */
+        header.desktop nav > ul li:hover {
+          background-color: #82bc00; }
+          /* line 97, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_header.scss */
+          header.desktop nav > ul li:hover > a {
+            color: #ffffff; }
+        /* line 101, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_header.scss */
+        header.desktop nav > ul li.active {
+          background-color: #82bc00; }
+          /* line 103, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_header.scss */
+          header.desktop nav > ul li.active > a {
+            color: #ffffff; }
+          /* line 106, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_header.scss */
+          header.desktop nav > ul li.active::after {
+            width: 0;
+            height: 0;
+            content: '';
+            position: absolute;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 20px solid #e4e4e6;
+            border-width: 15px;
+            margin-left: -15px;
+            margin-top: -15px; }
+          /* line 118, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_header.scss */
+          header.desktop nav > ul li.active ul {
+            max-height: 70px; }
+        /* line 122, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_header.scss */
+        header.desktop nav > ul li.onpage {
+          background-color: #82bc00; }
+          /* line 124, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_header.scss */
+          header.desktop nav > ul li.onpage > a {
+            color: #ffffff; }
+          /* line 127, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_header.scss */
+          header.desktop nav > ul li.onpage::after {
+            width: 0;
+            height: 0;
+            content: '';
+            position: absolute;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 20px solid #82bc00;
+            border-width: 15px;
+            margin-left: -15px; }
+        /* line 139, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_header.scss */
+        header.desktop nav > ul li > a {
+          text-transform: uppercase;
+          height: 100%;
+          display: block;
+          padding: 21px 15px;
+          color: #182128; }
+        /* line 146, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_header.scss */
+        header.desktop nav > ul li > ul {
+          position: absolute;
+          background-color: #e4e4e6;
+          left: 0;
+          width: 100%;
+          font-weight: normal;
+          max-height: 0;
+          overflow: hidden;
+          z-index: 99999;
+          -moz-transition-duration: 0.5s;
+          -o-transition-duration: 0.5s;
+          -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s; }
+          /* line 156, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_header.scss */
+          header.desktop nav > ul li > ul li {
+            display: inline-block; }
+            /* line 158, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_header.scss */
+            header.desktop nav > ul li > ul li:hover {
+              background-color: #e4e4e6; }
+            /* line 161, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_header.scss */
+            header.desktop nav > ul li > ul li a {
+              color: #182128;
+              padding: 10px 15px;
+              text-transform: capitalize; }
+              /* line 165, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_header.scss */
+              header.desktop nav > ul li > ul li a:hover {
+                color: #82bc00; }
+
+/* line 176, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_header.scss */
+header.mobile {
+  display: block;
+  width: 100%;
+  padding: 0 5%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  z-index: +2;
+  position: fixed;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s; }
+  /* line 194, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_header.scss */
+  header.mobile.mobile_active {
+    margin-left: 300px; }
+  @media only screen and (min-width: 1000px) {
+    /* line 176, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_header.scss */
+    header.mobile {
+      display: none; } }
+  /* line 200, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_header.scss */
+  header.mobile nav {
+    position: relative; }
+    /* line 203, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_header.scss */
+    header.mobile nav h1 .logo {
+      width: 210px;
+      height: 51px;
+      content: ' ';
+      background-image: url("/images/sprite.svg");
+      background-size: 400px 1001px !important;
+      background-position: -20px -20px;
+      background-repeat: no-repeat;
+      display: block;
+      color: transparent;
+      text-shadow: none;
+      text-indent: -9999px;
+      margin: 0 auto; }
+      /* line 128, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_global.scss */
+      .no-svg header.mobile nav h1 .logo {
+        background-image: url("/images/sprite.png"); }
+    /* line 210, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_header.scss */
+    header.mobile nav .hamburger {
+      position: absolute;
+      width: 33px;
+      height: 28px;
+      content: ' ';
+      background-image: url("/images/sprite.svg");
+      background-size: 400px 1001px !important;
+      background-position: -20px -230px;
+      background-repeat: no-repeat;
+      display: block;
+      color: transparent;
+      text-shadow: none;
+      text-indent: -9999px;
+      -moz-transition-duration: 0s;
+      -o-transition-duration: 0s;
+      -webkit-transition-duration: 0s;
+      transition-duration: 0s;
+      margin-top: 10px; }
+      /* line 128, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_global.scss */
+      .no-svg header.mobile nav .hamburger {
+        background-image: url("/images/sprite.png"); }
+      /* line 217, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_header.scss */
+      header.mobile nav .hamburger.close {
+        content: ' ';
+        background-image: url("/images/sprite.svg");
+        background-size: 400px 1001px !important;
+        background-position: -70px -230px;
+        background-repeat: no-repeat;
+        display: block;
+        color: transparent;
+        text-shadow: none;
+        text-indent: -9999px; }
+        /* line 128, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_global.scss */
+        .no-svg header.mobile nav .hamburger.close {
+          background-image: url("/images/sprite.png"); }
+
+/* line 1, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_mobile_nav.scss */
+div.mobile_nav {
+  width: 300px;
+  margin-left: -300px;
+  height: 100%;
+  background-color: #e4e4e6;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  border-right: 2px #e4e4e6 solid; }
+  /* line 12, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_mobile_nav.scss */
+  div.mobile_nav.mobile_active {
+    z-index: +2;
+    margin: 0; }
+  /* line 17, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_mobile_nav.scss */
+  div.mobile_nav form.search input[type=text] {
+    max-width: 100%;
+    opacity: 1; }
+  /* line 22, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_mobile_nav.scss */
+  div.mobile_nav nav {
+    margin: 60px 0 0 0; }
+    /* line 26, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_mobile_nav.scss */
+    div.mobile_nav nav > ul li a {
+      padding: 15px;
+      border-top: 2px #ffffff solid;
+      display: block;
+      color: #182128;
+      text-transform: uppercase; }
+    /* line 33, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_mobile_nav.scss */
+    div.mobile_nav nav > ul li > ul {
+      margin-bottom: 15px; }
+      /* line 36, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_mobile_nav.scss */
+      div.mobile_nav nav > ul li > ul li a {
+        text-transform: capitalize;
+        font-size: 14px;
+        line-height: 18.2px;
+        font-size: 1.4rem;
+        line-height: 1.82rem;
+        border-top: none;
+        padding: 10px 15px; }
+
+/* line 2, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+.information_boxes ul {
+  margin: 0 !important;
+  list-style-type: none; }
+  /* line 54, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_global.scss */
+  .information_boxes ul:before, .information_boxes ul:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  /* line 60, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_global.scss */
+  .information_boxes ul:after {
+    clear: both; }
+  /* line 8, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+  .information_boxes ul li {
+    height: 250px;
+    width: 100%;
+    float: none;
+    margin: 0 !important; }
+    /* line 14, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+    .information_boxes ul li a {
+      width: 100%;
+      height: 100%;
+      display: block;
+      color: #182128;
+      -moz-transition-duration: 0.5s;
+      -o-transition-duration: 0.5s;
+      -webkit-transition-duration: 0.5s;
+      transition-duration: 0.5s;
+      position: relative;
+      background-size: cover;
+      background-position: 0 0; }
+      /* line 23, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+      .information_boxes ul li a .overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: radial-gradient(ellipse at center, rgba(191, 117, 31, 0) 55%, rgba(191, 117, 31, 0.35) 100%); }
+      /* line 33, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+      .information_boxes ul li a header {
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 5px;
+        font-size: 11px;
+        line-height: 14.3px;
+        font-size: 1.1rem;
+        line-height: 1.43rem;
+        text-align: right;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        z-index: +1;
+        position: relative; }
+        /* line 54, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_global.scss */
+        .information_boxes ul li a header:before, .information_boxes ul li a header:after {
+          content: "\0020";
+          display: block;
+          height: 0;
+          overflow: hidden; }
+        /* line 60, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_global.scss */
+        .information_boxes ul li a header:after {
+          clear: both; }
+        /* line 42, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+        .information_boxes ul li a header span {
+          font-size: 17px;
+          line-height: 22.1px;
+          font-size: 1.7rem;
+          line-height: 2.21rem;
+          float: left; }
+        /* line 46, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+        .information_boxes ul li a header em {
+          display: none; }
+      /* line 50, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+      .information_boxes ul li a > span {
+        position: absolute;
+        display: block;
+        width: 100%;
+        max-height: 0;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        background-color: #82bc00;
+        overflow: hidden;
+        opacity: 0;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        -webkit-transition-duration: 0.5s;
+        transition-duration: 0.5s; }
+        /* line 62, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+        .information_boxes ul li a > span p {
+          position: absolute;
+          bottom: 0;
+          padding: 30px;
+          color: #ffffff;
+          margin: 0; }
+      /* line 70, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+      .information_boxes ul li a:hover {
+        color: #ffffff; }
+        /* line 72, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+        .information_boxes ul li a:hover header {
+          background-color: rgba(255, 255, 255, 0); }
+          /* line 74, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+          .information_boxes ul li a:hover header span {
+            display: none; }
+          /* line 77, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+          .information_boxes ul li a:hover header em {
+            display: inline-block;
+            margin-right: 2px; }
+            /* line 80, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+            .information_boxes ul li a:hover header em::after {
+              content: " : "; }
+        /* line 85, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+        .information_boxes ul li a:hover > span {
+          max-height: 250px;
+          opacity: 1; }
+    /* line 92, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+    .information_boxes ul li ul li {
+      height: 125px;
+      float: left;
+      width: 50%; }
+      /* line 98, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+      .information_boxes ul li ul li a header {
+        opacity: 0; }
+      /* line 102, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+      .information_boxes ul li ul li a span p {
+        padding: 15px; }
+      /* line 107, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+      .information_boxes ul li ul li a:hover header {
+        opacity: 1; }
+    @media only screen and (min-width: 650px) {
+      /* line 8, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+      .information_boxes ul li {
+        width: 50%;
+        float: left; } }
+    @media only screen and (min-width: 1000px) {
+      /* line 8, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+      .information_boxes ul li {
+        width: 33.33%;
+        float: left; } }
+
+/* line 129, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+.news_header {
+  display: none; }
+  /* line 131, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+  .news_header.mobile_active {
+    margin-left: 300px; }
+  /* line 134, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+  body.home .news_header, body.index .news_header {
+    display: none;
+    position: absolute;
+    top: 61px;
+    left: auto !important;
+    width: 100%;
+    z-index: +1;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s; }
+    @media only screen and (min-width: 650px) {
+      /* line 134, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+      body.home .news_header, body.index .news_header {
+        display: block; } }
+    @media only screen and (min-width: 1000px) {
+      /* line 134, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+      body.home .news_header, body.index .news_header {
+        top: 0; } }
+  /* line 150, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+  .news_header > ul {
+    margin-top: 0; }
+    @media only screen and (min-width: 650px) {
+      /* line 150, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+      .news_header > ul {
+        margin-top: 60px; } }
+    @media only screen and (min-width: 1000px) {
+      /* line 150, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+      .news_header > ul {
+        margin-top: 0; } }
+    /* line 158, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+    .news_header > ul > li {
+      display: none; }
+      /* line 161, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+      .news_header > ul > li > a span p {
+        font-size: 24px;
+        line-height: 31.2px;
+        font-size: 2.4rem;
+        line-height: 3.12rem; }
+      @media only screen and (min-width: 650px) {
+        /* line 166, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+        .news_header > ul > li:nth-child(1), .news_header > ul > li:nth-child(2) {
+          display: block; } }
+      @media only screen and (min-width: 1000px) {
+        /* line 172, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+        .news_header > ul > li:nth-child(3) {
+          display: block; } }
+
+/* line 184, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+.news_preview > ul li span p {
+  font-size: 24px;
+  line-height: 31.2px;
+  font-size: 2.4rem;
+  line-height: 3.12rem; }
+
+/* line 196, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+.people > ul li span p {
+  font-size: 18px;
+  line-height: 23.4px;
+  font-size: 1.8rem;
+  line-height: 2.34rem; }
+  /* line 198, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_information_boxes.scss */
+  .people > ul li span p strong {
+    font-size: 24px;
+    line-height: 31.2px;
+    font-size: 2.4rem;
+    line-height: 3.12rem; }
+
+/* line 2, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_footer.scss */
+#container > footer .map {
+  padding-bottom: 330px; }
+/* line 5, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_footer.scss */
+#container > footer .contact {
+  background: #ffffff url("/images/footer_decoration.png") left top no-repeat;
+  width: 100%;
+  padding: 0 5%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+  /* line 8, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_footer.scss */
+  #container > footer .contact .contact_container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-flex-flow: column nowrap;
+    -moz-box-flex-flow: column nowrap;
+    -webkit-flex-flow: column nowrap;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    max-width: 670px;
+    margin: 0 auto;
+    padding: 40px 0; }
+    /* line 14, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_footer.scss */
+    #container > footer .contact .contact_container .form_container {
+      -webkit-box-flex: 1 1 auto;
+      -moz-box-flex: 1 1 auto;
+      -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      -webkit-box-ordinal-group: 2;
+      -moz-box-ordinal-group: 2;
+      -ms-flex-order: 2;
+      -webkit-order: 2;
+      order: 2; }
+    /* line 18, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_footer.scss */
+    #container > footer .contact .contact_container .locations {
+      -webkit-box-flex: 0 0 auto;
+      -moz-box-flex: 0 0 auto;
+      -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+      -webkit-box-ordinal-group: 1;
+      -moz-box-ordinal-group: 1;
+      -ms-flex-order: 1;
+      -webkit-order: 1;
+      order: 1;
+      margin-left: 0;
+      text-align: center; }
+      /* line 23, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_footer.scss */
+      #container > footer .contact .contact_container .locations a {
+        color: #182128;
+        display: inline-block;
+        margin: 30px;
+        text-align: center; }
+        /* line 28, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_footer.scss */
+        #container > footer .contact .contact_container .locations a:hover {
+          color: #82bc00; }
+    @media only screen and (min-width: 450px) {
+      /* line 35, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_footer.scss */
+      #container > footer .contact .contact_container .locations a {
+        text-align: left; } }
+    @media only screen and (min-width: 650px) {
+      /* line 8, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_footer.scss */
+      #container > footer .contact .contact_container {
+        -webkit-box-flex-flow: row nowrap;
+        -moz-box-flex-flow: row nowrap;
+        -webkit-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap; }
+        /* line 42, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_footer.scss */
+        #container > footer .contact .contact_container .form_container {
+          -webkit-box-ordinal-group: 1;
+          -moz-box-ordinal-group: 1;
+          -ms-flex-order: 1;
+          -webkit-order: 1;
+          order: 1; }
+        /* line 45, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_footer.scss */
+        #container > footer .contact .contact_container .locations {
+          -webkit-box-ordinal-group: 2;
+          -moz-box-ordinal-group: 2;
+          -ms-flex-order: 2;
+          -webkit-order: 2;
+          order: 2;
+          margin-left: 80px; }
+          /* line 48, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_footer.scss */
+          #container > footer .contact .contact_container .locations a {
+            display: block;
+            margin: 25px 0 0 0; } }
+/* line 56, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_footer.scss */
+#container > footer .bottom_footer {
+  width: 100%;
+  padding: 0 5%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-flex-flow: column nowrap;
+  -moz-box-flex-flow: column nowrap;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  position: relative;
+  background-color: #182128;
+  color: #ffffff;
+  padding-top: 15px;
+  padding-bottom: 15px; }
+  @media only screen and (min-width: 650px) {
+    /* line 56, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_footer.scss */
+    #container > footer .bottom_footer {
+      -webkit-box-flex-flow: row nowrap;
+      -moz-box-flex-flow: row nowrap;
+      -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap; } }
+  /* line 68, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_footer.scss */
+  #container > footer .bottom_footer p {
+    -webkit-box-flex: 1 1 50%;
+    -moz-box-flex: 1 1 50%;
+    -webkit-flex: 1 1 50%;
+    -ms-flex: 1 1 50%;
+    flex: 1 1 50%;
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -ms-flex-order: 2;
+    -webkit-order: 2;
+    order: 2;
+    font-size: 10px;
+    line-height: 13px;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    vertical-align: middle;
+    text-align: center;
+    margin: 15px 0; }
+    @media only screen and (min-width: 650px) {
+      /* line 68, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_footer.scss */
+      #container > footer .bottom_footer p {
+        -webkit-box-ordinal-group: 1;
+        -moz-box-ordinal-group: 1;
+        -ms-flex-order: 1;
+        -webkit-order: 1;
+        order: 1;
+        text-align: left;
+        margin: 0; } }
+  /* line 81, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_footer.scss */
+  #container > footer .bottom_footer .to_top {
+    -webkit-box-flex: 0 0 33px;
+    -moz-box-flex: 0 0 33px;
+    -webkit-flex: 0 0 33px;
+    -ms-flex: 0 0 33px;
+    flex: 0 0 33px;
+    -webkit-box-ordinal-group: 3;
+    -moz-box-ordinal-group: 3;
+    -ms-flex-order: 3;
+    -webkit-order: 3;
+    order: 3;
+    width: 33px;
+    height: 38px;
+    content: ' ';
+    background-image: url("/images/sprite.svg");
+    background-size: 400px 1001px !important;
+    background-position: -20px -290px;
+    background-repeat: no-repeat;
+    display: block;
+    color: transparent;
+    text-shadow: none;
+    text-indent: -9999px;
+    z-index: 9999;
+    vertical-align: middle;
+    opacity: 1;
+    text-align: center;
+    margin: 0 auto; }
+    /* line 128, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_global.scss */
+    .no-svg #container > footer .bottom_footer .to_top {
+      background-image: url("/images/sprite.png"); }
+    /* line 92, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_footer.scss */
+    #container > footer .bottom_footer .to_top:hover {
+      opacity: .6; }
+    @media only screen and (min-width: 650px) {
+      /* line 81, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_footer.scss */
+      #container > footer .bottom_footer .to_top {
+        -webkit-box-ordinal-group: 2;
+        -moz-box-ordinal-group: 2;
+        -ms-flex-order: 2;
+        -webkit-order: 2;
+        order: 2; } }
+  /* line 99, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_footer.scss */
+  #container > footer .bottom_footer ul.social_footer {
+    -webkit-box-flex: 1 1 50%;
+    -moz-box-flex: 1 1 50%;
+    -webkit-flex: 1 1 50%;
+    -ms-flex: 1 1 50%;
+    flex: 1 1 50%;
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -ms-flex-order: 1;
+    -webkit-order: 1;
+    order: 1;
+    vertical-align: middle;
+    text-align: center;
+    margin: 0 !important;
+    list-style-type: none; }
+    @media only screen and (min-width: 650px) {
+      /* line 99, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_footer.scss */
+      #container > footer .bottom_footer ul.social_footer {
+        -webkit-box-ordinal-group: 3;
+        -moz-box-ordinal-group: 3;
+        -ms-flex-order: 3;
+        -webkit-order: 3;
+        order: 3;
+        text-align: right; } }
+    /* line 110, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_footer.scss */
+    #container > footer .bottom_footer ul.social_footer li {
+      display: inline-block;
+      margin: 0 !important; }
+      /* line 113, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_footer.scss */
+      #container > footer .bottom_footer ul.social_footer li a {
+        vertical-align: middle;
+        margin: 0 15px;
+        opacity: 1; }
+        /* line 117, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_footer.scss */
+        #container > footer .bottom_footer ul.social_footer li a:hover {
+          opacity: .6; }
+        /* line 120, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_footer.scss */
+        #container > footer .bottom_footer ul.social_footer li a.twitter {
+          width: 21px;
+          height: 17px;
+          content: ' ';
+          background-image: url("/images/sprite.svg");
+          background-size: 400px 1001px !important;
+          background-position: -20px -420px;
+          background-repeat: no-repeat;
+          display: block;
+          color: transparent;
+          text-shadow: none;
+          text-indent: -9999px; }
+          /* line 128, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_global.scss */
+          .no-svg #container > footer .bottom_footer ul.social_footer li a.twitter {
+            background-image: url("/images/sprite.png"); }
+        /* line 125, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_footer.scss */
+        #container > footer .bottom_footer ul.social_footer li a.youtube {
+          width: 26px;
+          height: 19px;
+          content: ' ';
+          background-image: url("/images/sprite.svg");
+          background-size: 400px 1001px !important;
+          background-position: -20px -460px;
+          background-repeat: no-repeat;
+          display: block;
+          color: transparent;
+          text-shadow: none;
+          text-indent: -9999px; }
+          /* line 128, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_global.scss */
+          .no-svg #container > footer .bottom_footer ul.social_footer li a.youtube {
+            background-image: url("/images/sprite.png"); }
+        /* line 130, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_footer.scss */
+        #container > footer .bottom_footer ul.social_footer li a.facebook {
+          width: 20px;
+          height: 20px;
+          content: ' ';
+          background-image: url("/images/sprite.svg");
+          background-size: 400px 1001px !important;
+          background-position: -20px -500px;
+          background-repeat: no-repeat;
+          display: block;
+          color: transparent;
+          text-shadow: none;
+          text-indent: -9999px; }
+          /* line 128, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_global.scss */
+          .no-svg #container > footer .bottom_footer ul.social_footer li a.facebook {
+            background-image: url("/images/sprite.png"); }
+        /* line 135, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_footer.scss */
+        #container > footer .bottom_footer ul.social_footer li a.rss {
+          width: 20px;
+          height: 20px;
+          content: ' ';
+          background-image: url("/images/sprite.svg");
+          background-size: 400px 1001px !important;
+          background-position: -20px -540px;
+          background-repeat: no-repeat;
+          display: block;
+          color: transparent;
+          text-shadow: none;
+          text-indent: -9999px; }
+          /* line 128, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_global.scss */
+          .no-svg #container > footer .bottom_footer ul.social_footer li a.rss {
+            background-image: url("/images/sprite.png"); }
+
+/* line 1, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-home.scss */
+ul.slider_nav {
+  position: absolute;
+  top: auto;
+  bottom: 30px;
+  right: 30px;
+  z-index: +1;
+  margin: 0 !important;
+  list-style-type: none !important;
+  opacity: 1;
+  display: none; }
+  /* line 11, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-home.scss */
+  ul.slider_nav.sticky {
+    top: 47%;
+    bottom: auto;
+    transform: translateY(-47%);
+    position: fixed; }
+  /* line 17, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-home.scss */
+  ul.slider_nav.hide {
+    opacity: 0;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s; }
+  @media only screen and (min-width: 650px) {
+    /* line 1, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-home.scss */
+    ul.slider_nav {
+      display: block; } }
+  /* line 24, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-home.scss */
+  ul.slider_nav li {
+    margin: 0 !important;
+    text-align: right;
+    border-right: 1px solid #ffffff; }
+    /* line 28, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-home.scss */
+    ul.slider_nav li:hover {
+      border-right: 1px solid transparent; }
+    /* line 31, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-home.scss */
+    ul.slider_nav li a {
+      color: #ffffff;
+      padding: 5px 15px 5px 0;
+      display: block;
+      position: relative;
+      opacity: .7;
+      font-weight: bold;
+      text-shadow: rgba(24, 33, 40, 0.2) 1px 1px 0px; }
+      /* line 39, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-home.scss */
+      ul.slider_nav li a::after {
+        font-family: 'emm-icons';
+        font-size: 28px;
+        line-height: 36.4px;
+        font-size: 2.8rem;
+        line-height: 3.64rem;
+        content: "";
+        position: absolute;
+        right: -14px;
+        bottom: 0; }
+      /* line 47, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-home.scss */
+      ul.slider_nav li a:hover {
+        opacity: 1; }
+        /* line 49, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-home.scss */
+        ul.slider_nav li a:hover::after {
+          content: ""; }
+    /* line 54, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-home.scss */
+    ul.slider_nav li.active {
+      border-right: 1px solid transparent; }
+      /* line 56, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-home.scss */
+      ul.slider_nav li.active a {
+        opacity: 1; }
+        /* line 58, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-home.scss */
+        ul.slider_nav li.active a::after {
+          content: ""; }
+
+/* line 66, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-home.scss */
+.page-slide {
+  height: 100%;
+  background-size: cover;
+  background-position: top left;
+  background-repeat: none;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden; }
+  /* line 74, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-home.scss */
+  .page-slide .slide_content {
+    width: 82%;
+    padding: 30px 15px 45px;
+    background: url("/images/arrow_green_right.png") bottom right no-repeat;
+    position: absolute;
+    top: 175px;
+    bottom: auto;
+    left: 5%;
+    right: 5%;
+    background-color: rgba(255, 255, 255, 0.8);
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    color: #182128; }
+    /* line 86, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-home.scss */
+    .page-slide .slide_content:hover {
+      background-color: rgba(255, 255, 255, 0.5); }
+    @media only screen and (min-width: 650px) {
+      /* line 74, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-home.scss */
+      .page-slide .slide_content {
+        width: 45%;
+        left: auto;
+        right: 250px; } }
+  /* line 96, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-home.scss */
+  .page-slide.slide1 .slide_content {
+    top: auto;
+    bottom: 100px; }
+  /* line 101, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-home.scss */
+  .page-slide a.next {
+    width: 33px;
+    height: 38px;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    margin-left: -16px;
+    content: ' ';
+    background-image: url("/images/sprite.svg");
+    background-size: 400px 1001px !important;
+    background-position: -20px -350px;
+    background-repeat: no-repeat;
+    display: block;
+    color: transparent;
+    text-shadow: none;
+    text-indent: -9999px;
+    opacity: 1; }
+    /* line 128, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_global.scss */
+    .no-svg .page-slide a.next {
+      background-image: url("/images/sprite.png"); }
+    /* line 110, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-home.scss */
+    .page-slide a.next:hover {
+      opacity: .5; }
+  /* line 115, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-home.scss */
+  .page-slide:last-child a.next {
+    display: none; }
+  /* line 119, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-home.scss */
+  .page-slide video {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    display: none; }
+    @media only screen and (min-width: 1000px) {
+      /* line 119, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-home.scss */
+      .page-slide video {
+        display: block; } }
+
+/* line 1, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-article.scss */
+section.news_tags {
+  width: 100%;
+  padding: 0 5%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 15px;
+  padding-bottom: 15px; }
+  /* line 5, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-article.scss */
+  section.news_tags ul {
+    margin: 0 !important;
+    list-style-type: none !important;
+    display: inline-block; }
+    /* line 9, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-article.scss */
+    section.news_tags ul li {
+      margin: 0 !important;
+      display: inline-block; }
+      /* line 12, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-article.scss */
+      section.news_tags ul li::after {
+        content: ", "; }
+      /* line 16, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-article.scss */
+      section.news_tags ul li:last-child::after {
+        content: ""; }
+      /* line 20, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-article.scss */
+      section.news_tags ul li a {
+        opacity: 1; }
+        /* line 22, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-article.scss */
+        section.news_tags ul li a:hover {
+          opacity: .4; }
+
+/* line 30, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-article.scss */
+#container > .news_image {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center; }
+  @media only screen and (min-width: 650px) {
+    /* line 30, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-article.scss */
+    #container > .news_image {
+      height: 750px; } }
+
+/* line 41, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-article.scss */
+article.main_news, article.small_news {
+  width: 100%;
+  margin: 0 auto;
+  padding: 70px 5%;
+  background: #ffffff;
+  position: relative;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+  @media only screen and (min-width: 650px) {
+    /* line 41, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-article.scss */
+    article.main_news, article.small_news {
+      width: 70%;
+      padding: 40px;
+      margin: -450px auto 0; } }
+  /* line 53, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-article.scss */
+  article.main_news .tag_share, article.small_news .tag_share {
+    margin: 30px 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex; }
+    /* line 56, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-article.scss */
+    article.main_news .tag_share ul, article.small_news .tag_share ul {
+      vertical-align: middle;
+      margin: 0 !important;
+      list-style-type: none; }
+      /* line 60, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-article.scss */
+      article.main_news .tag_share ul li, article.small_news .tag_share ul li {
+        display: inline-block;
+        margin: 0 !important; }
+      /* line 64, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-article.scss */
+      article.main_news .tag_share ul.tags, article.small_news .tag_share ul.tags {
+        -webkit-box-flex: 1 1 auto;
+        -moz-box-flex: 1 1 auto;
+        -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto; }
+        /* line 67, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-article.scss */
+        article.main_news .tag_share ul.tags li::after, article.small_news .tag_share ul.tags li::after {
+          content: ", "; }
+        /* line 71, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-article.scss */
+        article.main_news .tag_share ul.tags li:last-child::after, article.small_news .tag_share ul.tags li:last-child::after {
+          content: ""; }
+      /* line 77, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-article.scss */
+      article.main_news .tag_share ul.social, article.small_news .tag_share ul.social {
+        -webkit-box-flex: 0 0 auto;
+        -moz-box-flex: 0 0 auto;
+        -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        font-family: 'emm-icons'; }
+        /* line 81, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-article.scss */
+        article.main_news .tag_share ul.social li a, article.small_news .tag_share ul.social li a {
+          font-size: 20px;
+          line-height: 26px;
+          font-size: 2rem;
+          line-height: 2.6rem;
+          padding: 5px; }
+          /* line 84, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-article.scss */
+          article.main_news .tag_share ul.social li a:hover, article.small_news .tag_share ul.social li a:hover {
+            background-color: #82bc00;
+            color: #ffffff; }
+          /* line 89, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-article.scss */
+          article.main_news .tag_share ul.social li a.facebook::after, article.small_news .tag_share ul.social li a.facebook::after {
+            content: ""; }
+          /* line 94, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-article.scss */
+          article.main_news .tag_share ul.social li a.twitter::after, article.small_news .tag_share ul.social li a.twitter::after {
+            content: ""; }
+          /* line 99, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-article.scss */
+          article.main_news .tag_share ul.social li a.gplus::after, article.small_news .tag_share ul.social li a.gplus::after {
+            content: ""; }
+          /* line 104, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-article.scss */
+          article.main_news .tag_share ul.social li a.shareplus::after, article.small_news .tag_share ul.social li a.shareplus::after {
+            content: ""; }
+  /* line 113, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-article.scss */
+  article.main_news .author, article.small_news .author {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-flex-flow: column wrap;
+    -moz-box-flex-flow: column wrap;
+    -webkit-flex-flow: column wrap;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap; }
+    /* line 116, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-article.scss */
+    article.main_news .author .information, article.small_news .author .information {
+      width: 100%;
+      -webkit-box-flex: 1 1 auto;
+      -moz-box-flex: 1 1 auto;
+      -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      -webkit-box-ordinal-group: 2;
+      -moz-box-ordinal-group: 2;
+      -ms-flex-order: 2;
+      -webkit-order: 2;
+      order: 2; }
+      /* line 121, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-article.scss */
+      article.main_news .author .information h5 span, article.small_news .author .information h5 span {
+        font-size: 13px;
+        line-height: 16.9px;
+        font-size: 1.3rem;
+        line-height: 1.69rem;
+        color: #82bc00; }
+    /* line 127, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-article.scss */
+    article.main_news .author .photo, article.small_news .author .photo {
+      width: 100%;
+      -webkit-box-flex: 1 1 auto;
+      -moz-box-flex: 1 1 auto;
+      -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      -webkit-box-ordinal-group: 1;
+      -moz-box-ordinal-group: 1;
+      -ms-flex-order: 1;
+      -webkit-order: 1;
+      order: 1; }
+    @media only screen and (min-width: 650px) {
+      /* line 113, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-article.scss */
+      article.main_news .author, article.small_news .author {
+        -webkit-box-flex-flow: row wrap;
+        -moz-box-flex-flow: row wrap;
+        -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap; }
+        /* line 134, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-article.scss */
+        article.main_news .author .information, article.small_news .author .information {
+          -webkit-box-ordinal-group: 1;
+          -moz-box-ordinal-group: 1;
+          -ms-flex-order: 1;
+          -webkit-order: 1;
+          order: 1;
+          width: 66%; }
+        /* line 138, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-article.scss */
+        article.main_news .author .photo, article.small_news .author .photo {
+          -webkit-box-ordinal-group: 2;
+          -moz-box-ordinal-group: 2;
+          -ms-flex-order: 2;
+          -webkit-order: 2;
+          order: 2;
+          width: 33%; } }
+
+/* line 146, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-article.scss */
+article.small_news {
+  margin: 0 auto; }
+
+/* line 1, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-interior.scss */
+article.interior_page {
+  width: 100%;
+  margin: 0 auto;
+  padding: 70px 5%;
+  background: #ffffff;
+  position: relative;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+  /* line 8, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-interior.scss */
+  article.interior_page .fourohfoursearch {
+    width: 100%;
+    height: 75px; }
+    /* line 12, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-interior.scss */
+    article.interior_page .fourohfoursearch form.search input[type=text] {
+      max-width: 100%;
+      opacity: 1;
+      border: #e4e4e6 1px solid; }
+  @media only screen and (min-width: 650px) {
+    /* line 1, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-interior.scss */
+    article.interior_page {
+      width: 70%;
+      padding: 40px;
+      margin: -450px auto 0; } }
+
+/* line 1, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-clients.scss */
+section.clients {
+  padding: 60px 5%; }
+  /* line 3, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-clients.scss */
+  section.clients ul {
+    margin: 0 !important;
+    list-style-type: none !important; }
+    /* line 6, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-clients.scss */
+    section.clients ul li {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 30px; }
+      /* line 10, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-clients.scss */
+      section.clients ul li a {
+        opacity: 1; }
+        /* line 12, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-clients.scss */
+        section.clients ul li a:hover {
+          opacity: .6; }
+  @media only screen and (min-width: 650px) {
+    /* line 1, /Users/rcayabyab/sites/powerhouse/ep05202015/source/stylesheets/partials/_page-clients.scss */
+    section.clients {
+      padding: 60px 10%; } }
