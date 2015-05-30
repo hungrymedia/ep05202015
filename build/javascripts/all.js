@@ -50,7 +50,9 @@ $(document).ready(function(){
   // TOGGLES SUBNAV ON CLICK
   $('header.desktop nav ul li').click(function(e) {
     if ($(this).has('ul').length > 0) {
-      e.preventDefault();
+      if(!$(this).hasClass('active')){
+        e.preventDefault();
+      }
       $(this).toggleClass('active');
     }
   });

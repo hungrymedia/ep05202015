@@ -119,7 +119,7 @@ header.desktop {
             max-height: 70px;
           }
         }
-        &.onpage {
+        &.onpage,&.current-menu-item, {
           background-color: $green;
           > a {
             color: $white;
